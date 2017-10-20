@@ -1,8 +1,8 @@
 /*************************************************
-* Program: 
+* Program: Project 2 - Zoo Tycoon
 * Author: Emmet Cooke
-* Date: 
-* Description: 
+* Date: 10/20/2017
+* Description: This program runs a Zoo Tycoon simulation.
 *************************************************/
 int main()
 {

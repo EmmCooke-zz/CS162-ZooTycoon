@@ -4,8 +4,8 @@
 * Description: This is the header file for the Turtle
 * class.
 *************************************************/
-#ifndef Turtle_HPP
-#define Turtle_HPP
+#ifndef TURTLE_HPP
+#define TURTLE_HPP
 
 #include "Animal.hpp"
 class Turtle :

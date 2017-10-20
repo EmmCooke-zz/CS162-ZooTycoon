@@ -18,6 +18,27 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Animal.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="newAnimal.cpp" />
+    <ClCompile Include="Penguin.cpp" />
+    <ClCompile Include="Tiger.cpp" />
+    <ClCompile Include="Turtle.cpp" />
+    <ClCompile Include="validateInput.cpp" />
+    <ClCompile Include="Zoo.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Animal.hpp" />
+    <ClInclude Include="Menu.hpp" />
+    <ClInclude Include="newAnimal.hpp" />
+    <ClInclude Include="Penguin.hpp" />
+    <ClInclude Include="Tiger.hpp" />
+    <ClInclude Include="Turtle.hpp" />
+    <ClInclude Include="validateInput.hpp" />
+    <ClInclude Include="Zoo.hpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{32ECEFD6-79C0-4397-94ED-7AD54175378D}</ProjectGuid>
@@ -110,8 +131,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

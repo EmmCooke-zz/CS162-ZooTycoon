@@ -8,19 +8,19 @@
 #define NEW_ANIMAL_HPP
 
 #include "Animal.hpp"
-class newAnimal :
+class NewAnimal :
 	public Animal
 {
 public:
 	// Default Constructor
-	newAnimal();
+	NewAnimal();
 
 	// Constructor that takes one int
 	// Initializes an bought adult tiger
-	newAnimal(int ageIn);
+	NewAnimal(int ageIn);
 
 	// Destructor
-	~newAnimal();
+	~NewAnimal();
 
 	// Getters
 	virtual int getNumBabies() { return numBabies; }
@@ -35,7 +35,7 @@ public:
 	virtual void setPayoff(double payoffIn) { payoff = payoffIn; }
 
 	// Increase age
-	newAnimal operator+(int);
+	NewAnimal operator+(int);
 };
 
 #endif

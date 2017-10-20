@@ -2,19 +2,19 @@
 * Author: Emmet Cooke
 * Date: 10/20/2017
 * Description: This file contains the definitions for
-* the newAnimal class.
+* the NewAnimal class.
 *************************************************/
-#include "newAnimal.hpp"
+#include "NewAnimal.hpp"
 
 /*************************************************
 * Description: Default Constructor. For babies.
 *************************************************/
-newAnimal::newAnimal() : Animal(1)
+NewAnimal::NewAnimal() : Animal(1)
 {
-	newAnimal::setNumBabies(0);
-	newAnimal::setCost(0.00);
-	newAnimal::setBaseFoodCost(0.0);
-	newAnimal::setPayoff(0.0);
+	NewAnimal::setNumBabies(0);
+	NewAnimal::setCost(0.00);
+	NewAnimal::setBaseFoodCost(0.0);
+	NewAnimal::setPayoff(0.0);
 }
 
 /*************************************************
@@ -22,29 +22,29 @@ newAnimal::newAnimal() : Animal(1)
 * age and passes it to the Animal constructor. For
 * adults.
 *************************************************/
-newAnimal::newAnimal(int ageIn)
+NewAnimal::NewAnimal(int ageIn)
 	: Animal(ageIn)
 {
-	newAnimal::setNumBabies(0);
-	newAnimal::setCost(0.00);
-	newAnimal::setBaseFoodCost(0.0);
-	newAnimal::setPayoff(0.00);
+	NewAnimal::setNumBabies(0);
+	NewAnimal::setCost(0.00);
+	NewAnimal::setBaseFoodCost(0.0);
+	NewAnimal::setPayoff(0.00);
 }
 
 /*************************************************
 * Description: Destructor.
 *************************************************/
-newAnimal::~newAnimal()
+NewAnimal::~NewAnimal()
 {
 }
 
 /*************************************************
 * Description: Overloading the postfix ++ operator
-* so that it is easier to increase the newAnimals age.
+* so that it is easier to increase the NewAnimals age.
 *************************************************/
-newAnimal newAnimal::operator+(int)
+NewAnimal NewAnimal::operator+(int)
 {
-	newAnimal temp = *this;
+	NewAnimal temp = *this;
 	age++;
 	return temp;
 }

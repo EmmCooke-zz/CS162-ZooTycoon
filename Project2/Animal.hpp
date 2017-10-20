@@ -9,7 +9,7 @@
 
 class Animal
 {
-private:
+protected:
 	int age;
 	int numBabies;
 	double cost;

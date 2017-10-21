@@ -9,6 +9,12 @@ using std::cout;
 using std::endl;
 using std::cin;
 
+#include <iomanip>
+using std::setw;
+using std::fixed;
+using std::showpoint;
+using std::setprecision;
+
 #include <string>
 using std::string;
 
@@ -20,10 +26,30 @@ using std::string;
 *************************************************/
 Zoo::Zoo()
 {
+	// Starting variables
+	cash = 100000; // Starts with $100,000
+	currentDay = 1;
+
+	// Tigers
 	tigerArray = new Tiger[10];
+	tigerArraySize = 10;
+	numTigers = 0;
+
+
+	// Penguins
 	penguinArray = new Penguin[10];
+	penguinArraySize = 10;
+	numPenguins = 0;
+
+	// Turtles
 	turtleArray = new Turtle[10];
+	turtleArraySize = 10;
+	numTurtles = 0;
+
+	// New Animals
 	newAnimalArray = new NewAnimal[10];
+	newAnimalArraySize = 10;
+	numNewAnimals = 0;
 }
 
 /*************************************************
@@ -48,7 +74,11 @@ void Zoo::runGame()
 	string validateInput;
 	welcomeMessage();
 
-	
+	bool endOfDayContinue = true;
+	do
+	{
+		endOfDayContinue = endDay();
+	} while (endOfDayContinue);
 
 }
 
@@ -141,9 +171,36 @@ void Zoo::welcomeMessage()
 /*************************************************
 * Description:
 *************************************************/
+bool Zoo::endDay()
+{
+	cout << "----------------" << endl;
+	cout << "Current Cash Balance: $" << setw(8) << showpoint << fixed << setprecision(2) << cash << endl;
+	cout << "Tiger Population    : " << this->getNumTigers() << endl;
+	//cout << "Penguin Population  :  " << penguinArray->getNumPenguins() << endl;
+	//cout << "Turtle Population   :  " << turtleArray->getNumTurtles() << endl;
+	// if (newAnimalExists)
+	// cout << newAnimalArray->getName() << " Population   :  " << newAnimalArray->getNumNewAnimals() << endl;
+	cout << "Would you like to continue to tomorrow (y/n)? " << endl;
+	string answer;
+	getline(cin, answer);
+	if (answer == "y")
+	{
+		return true;
+	}
+	return false;
+}
+/*************************************************
+* Description:
+*************************************************/
 void Zoo::addTiger(int tigersIn)
 {
-	
+	int numTigers = this->getNumTigers() + tigersIn;
+	this->setNumTigers(numTigers);
+	if (numTigers > this->getTigerArraySize() - 1)
+	{
+		//doubleTigerArray();
+	}
+	cash -= tigerArray->getCost() * tigersIn;
 }
 
 /*************************************************
@@ -200,4 +257,18 @@ void Zoo::babyBorn()
 void Zoo::calculateProfit()
 {
 	
+}
+
+/*************************************************
+* Description: Checks to see if the cash balance is
+* less than 0. If it is, it returns false and the game ends.
+* Otherwise, it returns true.
+*************************************************/
+bool Zoo::checkBalance()
+{
+	if (this->cash < 0)
+	{
+		return false;
+	}
+	return true;
 }

@@ -15,12 +15,28 @@
 class Zoo
 {
 private:
-	double cash = 100000.00; // Starts with $100,000
-	int currentDay = 1;
+	double cash; // Starts with $100,000
+	int currentDay;
+
+	// Tigers
 	Tiger * tigerArray;
+	int tigerArraySize;
+	int numTigers;
+
+	// Penguins
 	Penguin * penguinArray;
+	int penguinArraySize;
+	int numPenguins;
+
+	// Turtles
 	Turtle * turtleArray;
+	int turtleArraySize;
+	int numTurtles;
+
+	// New Animal
 	NewAnimal * newAnimalArray;
+	int newAnimalArraySize;
+	int numNewAnimals;
 
 public:
 	// Default Constructor
@@ -28,11 +44,53 @@ public:
 	// Destructor
 	~Zoo();
 
+	// Getters
+
+	// Tigers
+	Tiger * getTigers() const { return tigerArray; }
+	int getTigerArraySize() const { return tigerArraySize; }
+	int getNumTigers() const { return numTigers; }
+
+	// Penguins
+	Penguin * getPenguins() const { return penguinArray; }
+	int getPenguinArraySize() const { return penguinArraySize; }
+	int getNumPenguins() const { return numPenguins; }
+
+	// Turtles
+	Turtle * getTurtles() const { return turtleArray; }
+	int getTurtleArraySize() const { return turtleArraySize; }
+	int getNumTurtles() const { return numTurtles; }
+
+	// New Animals
+	NewAnimal * getNewAnimals() const { return newAnimalArray; }
+	int getNewAnimalArraySize() const { return newAnimalArraySize; }
+	int getNumNewAnimals() const { return numNewAnimals; }
+
+	// Setters
+
+	// Tigers
+	void setTigerArraySize(int arraySizeIn) { tigerArraySize = arraySizeIn; }
+	void setNumTigers(int numTigersIn) { numTigers = numTigersIn; }
+
+	// Penguins
+	void setPenguinArraySize(int arraySizeIn) { penguinArraySize = arraySizeIn; }
+	void setNumPenguins(int numPenguinsIn) { numPenguins = numPenguinsIn; }
+
+	// Turtles
+	void setTurtleArraySize(int arraySizeIn) { turtleArraySize = arraySizeIn; }
+	void setNumTurtles(int numTurtlesIn) { numTurtles = numTurtlesIn; }
+
+	// New Animals
+	void setNewAnimalArraySize(int arraySizeIn) { newAnimalArraySize = arraySizeIn; }
+	void setNumNewAnimals(int numNewAnimalsIn) { numNewAnimals = numNewAnimalsIn; }
+
 	// Function to run the game
 	void runGame();
 
 	// Function to display game start message
 	void welcomeMessage();
+	// Function to display end of day statistics
+	bool endDay();
 
 	// Functions to add animals to their arrays
 	void addTiger(int tigersIn);
@@ -44,7 +102,10 @@ public:
 	void sickAnimal();
 	void attendanceBoom();
 	void babyBorn();
+
+	// Used to check the balance of the cash
 	void calculateProfit();
+	bool checkBalance();
 };
 
 #endif

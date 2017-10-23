@@ -9,12 +9,12 @@
 /*************************************************
 * Description: Default Constructor. For babies.
 *************************************************/
-Turtle::Turtle() : Animal(1)
+Turtle::Turtle() : Animal(0)
 {
 	Turtle::setNumBabies(10);
 	Turtle::setCost(100.00);
-	Turtle::setBaseFoodCost(0.5);
-	Turtle::setPayoff(0.05);
+	Turtle::setBaseFoodCost(0.5 * BASE_FOOD_COST);
+	Turtle::setPayoff(0.05 * 100.00);
 }
 
 /*************************************************
@@ -27,8 +27,8 @@ Turtle::Turtle(int ageIn)
 {
 	Turtle::setNumBabies(10);
 	Turtle::setCost(100.00);
-	Turtle::setBaseFoodCost(0.5);
-	Turtle::setPayoff(0.05);
+	Turtle::setBaseFoodCost(0.5 * BASE_FOOD_COST);
+	Turtle::setPayoff(0.05 * 100.00);
 }
 
 /*************************************************

@@ -7,6 +7,8 @@
 #ifndef ANIMAL_HPP
 #define ANIMAL_HPP
 
+const double BASE_FOOD_COST = 100;
+
 class Animal
 {
 protected:

@@ -9,12 +9,12 @@
 /*************************************************
 * Description: Default Constructor. For babies.
 *************************************************/
-Tiger::Tiger() : Animal(1)
+Tiger::Tiger() : Animal(0)
 {
 	Tiger::setNumBabies(1);
 	Tiger::setCost(10000.00);
-	Tiger::setBaseFoodCost(5);
-	Tiger::setPayoff(0.2);
+	Tiger::setBaseFoodCost(5 * BASE_FOOD_COST);
+	Tiger::setPayoff(0.2 * 10000.00);
 }
 
 /*************************************************
@@ -27,8 +27,8 @@ Tiger::Tiger(int ageIn)
 {
 	Tiger::setNumBabies(1);
 	Tiger::setCost(10000.00);
-	Tiger::setBaseFoodCost(5);
-	Tiger::setPayoff(0.2);
+	Tiger::setBaseFoodCost(5 * BASE_FOOD_COST);
+	Tiger::setPayoff(0.2 * 10000.00);
 }
 
 /*************************************************

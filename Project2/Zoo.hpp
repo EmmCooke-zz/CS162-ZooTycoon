@@ -37,6 +37,7 @@ private:
 	NewAnimal * newAnimalArray;
 	int newAnimalArraySize;
 	int numNewAnimals;
+	bool newAnimalExists;
 
 public:
 	// Default Constructor
@@ -71,22 +72,32 @@ public:
 	// Tigers
 	void setTigerArraySize(int arraySizeIn) { tigerArraySize = arraySizeIn; }
 	void setNumTigers(int numTigersIn) { numTigers = numTigersIn; }
+	void doubleTigerArray(int babiesIn);
 
 	// Penguins
 	void setPenguinArraySize(int arraySizeIn) { penguinArraySize = arraySizeIn; }
 	void setNumPenguins(int numPenguinsIn) { numPenguins = numPenguinsIn; }
+	void doublePenguinArray(int babiesIn);
 
 	// Turtles
 	void setTurtleArraySize(int arraySizeIn) { turtleArraySize = arraySizeIn; }
 	void setNumTurtles(int numTurtlesIn) { numTurtles = numTurtlesIn; }
+	void doubleTurtleArray(int babiesIn);
 
 	// New Animals
 	void setNewAnimalArraySize(int arraySizeIn) { newAnimalArraySize = arraySizeIn; }
 	void setNumNewAnimals(int numNewAnimalsIn) { numNewAnimals = numNewAnimalsIn; }
+	void doubleNewAnimalArray(int babiesIn);
 
 	// Function to run the game
 	void runGame();
 
+	// Used to age the animals
+	void ageAnimals();
+	// Used to feed the animals
+	void feedAnimals();
+	// Cause random event to occur
+	void performRandomEvent();
 	// Function to display game start message
 	void welcomeMessage();
 	// Function to display end of day statistics

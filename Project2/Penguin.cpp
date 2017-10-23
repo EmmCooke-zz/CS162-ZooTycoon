@@ -9,12 +9,12 @@
 /*************************************************
 * Description: Default Constructor. For babies.
 *************************************************/
-Penguin::Penguin() : Animal(1)
+Penguin::Penguin() : Animal(0)
 {
 	Penguin::setNumBabies(5);
 	Penguin::setCost(1000.00);
-	Penguin::setBaseFoodCost(1);
-	Penguin::setPayoff(0.1);
+	Penguin::setBaseFoodCost(1 * BASE_FOOD_COST);
+	Penguin::setPayoff(0.1 * 1000.00);
 }
 
 /*************************************************
@@ -27,7 +27,7 @@ Penguin::Penguin(int ageIn)
 {
 	Penguin::setNumBabies(5);
 	Penguin::setCost(1000.00);
-	Penguin::setBaseFoodCost(1);
+	Penguin::setBaseFoodCost(1 * BASE_FOOD_COST);
 	Penguin::setPayoff(0.1);
 }
 

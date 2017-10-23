@@ -2,38 +2,30 @@
 * Author: Emmet Cooke
 * Date: 10/20/2017
 * Description: This file contains the definitions for
-* the Penguin class.
+* the Animal class.
 *************************************************/
-#include "Penguin.hpp"
+#include "Animal.hpp"
 
 /*************************************************
-* Description: Default Constructor. For babies.
+* Description: Default Constructor.
 *************************************************/
-Penguin::Penguin() : Animal(0)
+Animal::Animal()
 {
-	Penguin::setNumBabies(5);
-	Penguin::setCost(1000.00);
-	Penguin::setBaseFoodCost(1 * BASE_FOOD_COST);
-	Penguin::setPayoff(0.1 * 1000.00);
+	setAge(0);
 }
 
 /*************************************************
 * Description: Constructor that takes in one int for
-* age and passes it to the Animal constructor. For
-* adults.
+* the age of the animal.
 *************************************************/
-Penguin::Penguin(int ageIn)
-	: Animal(ageIn)
+Animal::Animal(int ageIn)
 {
-	Penguin::setNumBabies(5);
-	Penguin::setCost(1000.00);
-	Penguin::setBaseFoodCost(1 * BASE_FOOD_COST);
-	Penguin::setPayoff(0.1);
+	setAge(ageIn);
 }
 
 /*************************************************
 * Description: Destructor.
 *************************************************/
-Penguin::~Penguin()
+Animal::~Animal()
 {
 }
